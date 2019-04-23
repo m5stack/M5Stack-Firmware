@@ -1,11 +1,14 @@
 # M5Stack Firmware
+
+## Description
 You can share your firmware and other M5 fans can use it by M5Burner.But if you want to share your firmware here, you should follow some rules below.
 
 ## Demo
-* [UIFlow Firmware](https://github.com/sakabin/UIFlow-Firmware)
+* [UIFlow Firmware](https://github.com/sakabin/UIFlow-Firmware) (Multi Version Demo)
+* [Test Firmware](https://github.com/curdeveryday/test-firmware) (Single Version Demo)
 
 ## Quickstart
-### __Folder Structure__
+### __1.Folder Structure__
 Here some requirements to your firmware directory.For example:
 ```
 │  README.md
@@ -21,28 +24,81 @@ Here some requirements to your firmware directory.For example:
 ```
 > Your firmware root directory must have file *m5burner.json* and folder *firmware*.
 ---
-### __File *m5burner.json* Format__
+### __2.File *m5burner.json* Format__
 Some infomation must in your *m5burner.json*.For example:
-``` json
+``` javascript
 {
-    // Your firmware name.
-    "name": "",
-    // Your firmware version.
-    "version": "",
-    // Your firmware github repo url.
-    "repository": "",
-    "author": "",
-    "description": "",
-    "keywords": "",
-    "firmware-path": "",
-    "framework": ""
+    // Firmware name
+    "name": "UIFlow",
+    // Description
+    "description": "maybe nooooooooo bug",
+    // Keywords
+    "keywords": "ESP32, Micropython",
+    // Author
+    "author": "EeeeBin",
+    // The github repository of the firmware (Required)
+    "repository": "https://github.com/sakabin/UIFlow-Firmware",
+    // If there are multiple categories of firmware, this field will be a array.
+    // Otherwise, it will be a key-value structure.
+    // (Single version demo: https://github.com/curdeveryday/test-firmware)
+    "firmware_category": [
+        // Category infomation
+        {
+            // Category name
+            "Stack-EN": {
+                // Firmware path
+                "path": "firmware_en",
+                // Applicable Devices
+                "device": [
+                    "M5Stack Core"
+                ],
+                // Default baudrate
+                "default_baud": 921600
+            }
+        },
+        // Same of above ...
+        {
+            "Stack-CN": {
+                "path": "firmware_cn",
+                "device": [
+                    "M5Stack Core"
+                ],
+                "default_baud": 921600
+            }
+        },
+        {
+            "Stick": {
+                "path": "firmware_Stick",
+                "device": [
+                    "M5Stack Stick"
+                ],
+                "default_baud": 921600
+            }
+        },
+        {
+            "StickC": {
+                "path": "firmware_StickC",
+                "device": [
+                    "M5Stack StickC"
+                ],
+                "default_baud": 750000
+            }
+        }
+    ],
+    // Firmware version
+    "version": "1.2.3",
+    // Firmware platform
+    "framework": "Micropython"
 }
 ```
 > Here the *name*, *version* and *repository* are required.
 ---
-### __Folder *firmware*__
+### __3.Folder *firmware*__
 The name of files in *firmware* must follow the rules.
 
 #### __Please follow the rule `filename` = `name` + "_" + `flash address`.__
 
 For example, if you have a file _**a.bin**_ and it flash address is _**0x1000**_.It should be named _**a_0x1000.bin**_
+
+### __4.Pull Request__
+After meeting the above rules, you should submit a pull request in [M5Stack Firmware](https://github.com/EeeeBin/UIFlow-Firmware/pulls).We will review your firmware and add it in M5Burner.This operation is only required when the firmware is first submitted. If the firmware is updated, M5Burner will automatically obtain the new firmware address.
