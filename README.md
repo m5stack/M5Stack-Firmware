@@ -30,14 +30,19 @@ Some infomation must in your *m5burner.json*.For example:
 {
     // Firmware name
     "name": "UIFlow",
+
     // Description
     "description": "maybe nooooooooo bug",
+
     // Keywords
     "keywords": "ESP32, Micropython",
+
     // Author
     "author": "EeeeBin",
+
     // The github repository of the firmware (Required)
     "repository": "https://github.com/sakabin/UIFlow-Firmware",
+
     // If there are multiple categories of firmware, this field will be a array.
     // Otherwise, it will be a key-value structure.
     // (Single version demo: https://github.com/curdeveryday/test-firmware)
@@ -48,14 +53,15 @@ Some infomation must in your *m5burner.json*.For example:
             "Stack-EN": {
                 // Firmware path
                 "path": "firmware_en",
+
                 // Applicable Devices
-                "device": [
-                    "M5Stack Core"
-                ],
+                "device": ["M5Stack Core"],
+
                 // Default baudrate
                 "default_baud": 921600
             }
         },
+        
         // Same of above ...
         {
             "Stack-CN": {
@@ -85,8 +91,10 @@ Some infomation must in your *m5burner.json*.For example:
             }
         }
     ],
+    
     // Firmware version
     "version": "1.2.3",
+
     // Firmware platform
     "framework": "Micropython"
 }
