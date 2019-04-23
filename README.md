@@ -91,7 +91,7 @@ Some infomation must in your *m5burner.json*.For example:
             }
         }
     ],
-    
+
     // Firmware version
     "version": "1.2.3",
 
@@ -99,8 +99,7 @@ Some infomation must in your *m5burner.json*.For example:
     "framework": "Micropython"
 }
 ```
-> Here the *name*, *version* and *repository* are required.
----
+
 ### __3.Folder *firmware*__
 The name of files in *firmware* must follow the rules.
 
@@ -109,4 +108,4 @@ The name of files in *firmware* must follow the rules.
 For example, if you have a file _**a.bin**_ and it flash address is _**0x1000**_.It should be named _**a_0x1000.bin**_
 
 ### __4.Pull Request__
-After meeting the above rules, you should submit a pull request in [M5Stack Firmware](https://github.com/EeeeBin/UIFlow-Firmware/pulls).We will review your firmware and add it in M5Burner.This operation is only required when the firmware is first submitted. If the firmware is updated, M5Burner will automatically obtain the new firmware address.
+After meeting the above rules, you should fork our [repository](https://github.com/m5stack/M5Stack-Firmware) and add your firmware repository in `firmware-repo.list`.Now, you submit a pull request in [M5Stack Firmware](https://github.com/EeeeBin/UIFlow-Firmware/pulls).We will review your firmware and add it in M5Burner.This operation is only required when the firmware is first submitted. If the firmware is updated, M5Burner will automatically obtain the new firmware address.
