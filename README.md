@@ -4,7 +4,7 @@
 You can share your firmware and other M5 fans can use it by M5Burner.But if you want to share your firmware here, you should follow some rules below.
 
 ## Demo
-* [UIFlow Firmware](https://github.com/sakabin/UIFlow-Firmware) (Multi Version Demo)
+* [UIFlow Firmware](https://github.com/EeeeBin/UIFlow-Firmware) (Multi Version Demo)
 * [Test Firmware](https://github.com/curdeveryday/test-firmware) (Single Version Demo)
 
 ## Quickstart
@@ -23,7 +23,7 @@ Here some requirements to your firmware directory.For example:
         ......
 ```
 > Your firmware root directory must have file *m5burner.json* and folder *firmware*.
----
+
 ### __2.File *m5burner.json* Format__
 Some infomation must in your *m5burner.json*.For example:
 ``` javascript
@@ -41,7 +41,7 @@ Some infomation must in your *m5burner.json*.For example:
     "author": "EeeeBin",
 
     // The github repository of the firmware (Required)
-    "repository": "https://github.com/sakabin/UIFlow-Firmware",
+    "repository": "https://github.com/EeeeBin/UIFlow-Firmware",
 
     // If there are multiple categories of firmware, this field will be a array.
     // Otherwise, it will be a key-value structure.
@@ -109,3 +109,10 @@ For example, if you have a file _**a.bin**_ and it flash address is _**0x1000**_
 
 ### __4.Pull Request__
 After meeting the above rules, you should fork our [repository](https://github.com/m5stack/M5Stack-Firmware) and add your firmware repository in `firmware-repo.list`.Now, you submit a pull request in [M5Stack Firmware](https://github.com/EeeeBin/UIFlow-Firmware/pulls).We will review your firmware and add it in M5Burner.This operation is only required when the firmware is first submitted. If the firmware is updated, M5Burner will automatically obtain the new firmware address.
+
+## Download M5Burner
+- [Windows](http://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/software/M5Burner.zip)
+
+## Contribution
+Last but certainly not least, a big *__Thank You__*! To the following folks that helped to make M5Stack even better.
+- [EeeeBin](https://github.com/EeeeBin): Add firmware UIFlow [PR #1](https://github.com/m5stack/M5Stack-Firmware/pull/1)
