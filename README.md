@@ -112,6 +112,8 @@ After meeting the above rules, you should fork our [repository](https://github.c
 
 ## Download M5Burner
 - [Windows](http://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/software/M5Burner.zip)
+- [MacOS](http://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/software/M5Burner_MacOS.zip)
+- [Linux](http://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/software/M5Burner_Linux.zip)
 
 ## Contribution
 Last but certainly not least, a big *__Thank You__*! To the following folks that helped to make M5Stack even better.
